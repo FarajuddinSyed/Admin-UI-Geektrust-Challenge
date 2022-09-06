@@ -1,0 +1,342 @@
+.search-box {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+#search {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 100%;
+  padding-left: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.deleteSave {
+  display: flex;
+  justify-content: space-around;
+}
+.table tr {
+  box-shadow: 0px 1px 0px 0px #ddd;
+}
+
+.table td,
+.table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 11.563rem;
+}
+
+.table th {
+  text-align: left;
+}
+
+.checkboxesAll {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checksign {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  background-color: #eee;
+  margin-top: -9px;
+}
+
+.checksign:hover {
+  background-color: #ddd;
+}
+
+.checkboxesAll:checked ~ .checksign {
+  background-color: #2196f3;
+}
+
+.checksign:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxesAll:checked ~ .checksign:after {
+  display: block;
+}
+
+.checksign:after {
+  left: 7px;
+  top: 2px;
+  width: 3px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+ul {
+  height: 50px;
+  padding: 0px 5px;
+  margin-top: -29px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+ul li {
+  list-style: none;
+  font-weight: bold;
+}
+.editc {
+  width: 58.688px;
+}
+.edita {
+  width: 116.525px;
+}
+.editb {
+  width: 191.425px;
+}
+.editElement {
+  border: none;
+  background: none;
+}
+
+.editIcon {
+  background-image: url(./edit.svg);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.editIcon:hover,
+.editIcon.focus {
+  background-image: url(./edithover.svg);
+}
+
+.trashIcon {
+  background-image: url(./trash.svg);
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.trashIcon:hover,
+.editIcon.focus {
+  background-image: url(./trashhover.svg);
+}
+
+.save {
+  background-image: url(./save.svg);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.save:hover,
+.editIcon.focus {
+  background-image: url(./savehover.svg);
+}
+
+.imageAnimation {
+  width: 20rem;
+  height: 20rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+.NoDataFound {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 8rem;
+}
+.loadingScreen {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0;
+}
+#deleteSelected {
+  background-color: rgb(236, 56, 92);
+  border-radius: 12px;
+  height: 30px;
+  width: 120px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+#deleteSelected:hover {
+  background-color: rgb(223, 112, 134);
+}
+
+.pageNumberClick {
+  height: 30px;
+  width: 30px;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 50%;
+  background-color: #008cff;
+  color: white;
+  font-weight: lighter;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.pageNumberClick:hover {
+  border: 1px solid #008cff;
+  background-color: white;
+  color: #008cff;
+}
+
+.arrowButtons {
+  height: 30px;
+  width: 30px;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #ccc;
+  font-weight: lighter;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.activeArrow {
+  background: "#eee";
+  color: "#ccc";
+}
+
+.inactiveArrow {
+  color: "#ffffff";
+  background: "#008cff";
+}
+
+@media screen and (max-width: 538px) {
+  .table td,
+  .table th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 0;
+    font-size: 0.7rem;
+  }
+  .table {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: fit-content;
+  }
+  .search-box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .trashIcon {
+    margin-left: 0.2rem;
+  }
+  .editIcon {
+    margin-left: 0.2rem;
+  }
+  .checkboxPlace {
+    padding-right: 2rem;
+  }
+
+  #deleteSelected {
+    margin-bottom: 1rem;
+  }
+  .allPages {
+    margin-top: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .editc {
+    width: 2rem;
+  }
+  .edita {
+    width: 3rem;
+  }
+  .editb {
+    width: 7rem;
+  }
+  .pageNumberClick {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .arrowButtons {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 539px) and (max-width: 767px) {
+  .table td,
+  .table th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1.8rem;
+    font-size: 0.7rem;
+  }
+  .table {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: fit-content;
+  }
+  .search-box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .trashIcon {
+    margin-left: 0.2rem;
+  }
+  .editIcon {
+    margin-left: 0.2rem;
+  }
+  .checkboxPlace {
+    padding-right: 2rem;
+  }
+
+  #deleteSelected {
+    margin-bottom: 1rem;
+  }
+  .allPages {
+    margin-top: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .editc {
+    width: 2rem;
+  }
+  .edita {
+    width: 3rem;
+  }
+  .editb {
+    width: 7rem;
+  }
+  .pageNumberClick {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .arrowButtons {
+    margin-left: 10px;
+  }
+}
